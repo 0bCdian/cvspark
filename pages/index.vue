@@ -43,12 +43,35 @@
         <div
           class="flex flex-wrap md:justify-between md:gap-x-32 gap-y-14 justify-center items-center flex-col md:flex-row"
         >
-          <Card img-src="hh" text-header="Yeehaw"> Hello</Card>
-          <Card img-src="hh" text-header="Yeehaw"> Hello</Card>
-          <Card img-src="hh" text-header="Yeehaw"> Hello</Card>
-          <Card img-src="hh" text-header="Yeehaw"> Hello</Card>
-          <Card img-src="hh" text-header="Yeehaw"> Hello</Card>
-          <Card img-src="hh" text-header="Yeehaw"> Hello</Card>
+          <Card img-src="hh" text-header="Multi-Format Export">
+            Download your polished resume in PDF, LaTeX, or JSON formats, ready
+            for any application process.</Card
+          >
+          <Card img-src="hh" text-header="AI-Powered Analysis"
+            >Our smart checker spots etiquette faux pas and grammar slips,
+            ensuring your resume is flawless.</Card
+          >
+          <Card
+            img-src="hh"
+            text-header="No Login, Zero Data Stored In The Cloud"
+            >Your information stays with you. All history securely saved in
+            IndexDB, never in the cloud.</Card
+          >
+          <Card img-src="hh" text-header="Template Variety"
+            >Choose from 7 sleek templates to make your resume visually striking
+            and professionally tailored following Havard's Guidelines.</Card
+          >
+          <Card img-src="hh" text-header="Auto Cover Letters"
+            >Craft compelling cover letters in seconds with our AI assistant.
+            Personalized and powerful.</Card
+          >
+          <Card
+            img-src="hh"
+            text-header="Paste The LinkedIn Job Link, Fill Your Info And We'll Do The Rest"
+            >Just upload your current resume or fill the info necessary, paste
+            the job posting link or paste it in, and let the AI do it's
+            magic.</Card
+          >
         </div>
       </div>
     </section>
