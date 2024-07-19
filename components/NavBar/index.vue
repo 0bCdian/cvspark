@@ -32,15 +32,15 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="bg-white fixed z-20 w-full">
+  <header class="bg-white sticky top-0 z-50 w-full">
     <nav class="flex items-center justify-between h-20 px-4">
       <div>
         <NuxtLink to="/">
-          <span
-            class="transition-all font-extrabold text-xl border-black border-4 p-2 bg-[#F2cc60] shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-none active:bg-[#fdc900] rounded-xs"
+          <button
+            class="animate-button rounded-lg font-extrabold text-xl border-black border-4 p-2 bg-[#F2cc60] active:bg-[#fdc900] rounded-xs"
           >
             CVSPARK.
-          </span>
+          </button>
         </NuxtLink>
       </div>
 
@@ -56,7 +56,7 @@ const toggleMenu = () => {
         <li
           v-for="({ name, path, icon }, index) in navElements"
           :key="index"
-          class="transition-all border-black border-2 p-2 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] rounded-xs"
+          class="rounded-lg transition-all duration-250 border-black border-2 p-2 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] rounded-xs"
         >
           <NuxtLink
             :to="path"
@@ -72,59 +72,47 @@ const toggleMenu = () => {
     </nav>
 
     <!-- Mobile dropdown menu -->
-    <Transition name="expand">
-      <div v-if="isMenuOpen" class="lg:hidden mobile-menu-container">
-        <ul class="bg-white border-t border-gray-200">
-          <li
-            v-for="({ name, path, icon }, index) in navElements"
-            :key="index"
-            class="border-b border-gray-200 mobile-menu"
+    <div
+      :data-show="isMenuOpen"
+      class="lg:hidden overflow-hidden fixed top-20 w-full h-0 animate-h transition-all"
+    >
+      <ul class="bg-white border-t border-gray-200">
+        <li
+          v-for="({ name, path, icon }, index) in navElements"
+          :key="index"
+          class="border-b border-gray-200"
+        >
+          <NuxtLink
+            :to="path"
+            norel
+            :target="name === 'Github' ? '_blank' : '_self'"
+            class="flex justify-center items-center space-x-2 p-4 text-2xl"
+            @click="isMenuOpen = false"
           >
-            <NuxtLink
-              :to="path"
-              norel
-              :target="name === 'Github' ? '_blank' : '_self'"
-              class="flex justify-center items-center space-x-2 p-4 text-2xl"
-              @click="isMenuOpen = false"
-            >
-              <Icon :name="icon" size="1em" color="black" />
-              <span class="font-bold">{{ name }}</span>
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-    </Transition>
+            <Icon :name="icon" size="1em" color="black" />
+            <span class="font-bold">{{ name }}</span>
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
 
 <style scoped>
-.mobile-menu-container {
-  overflow: hidden;
+.animate-h[data-show="true"] {
+  height: auto;
+  height: calc-size(auto);
 }
 
-.mobile-menu {
-  transform-origin: top;
+.animate-button {
+  box-shadow: 3px 3px 0 0 black;
   transition:
-    max-height 0.3s ease-out,
-    opacity 0.2s ease-out;
+    box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.expand-enter-from,
-.expand-leave-to {
-  max-height: 0;
-  opacity: 0;
-}
-
-.expand-enter-to,
-.expand-leave-from {
-  max-height: 400px; /* Adjust this value based on your menu's maximum height */
-  opacity: 1;
-}
-
-.expand-enter-active,
-.expand-leave-active {
-  transition:
-    max-height 0.3s ease-in-out,
-    opacity 0.2s ease-in-out;
+.animate-button:hover {
+  box-shadow: 6px 6px 0 0 black;
+  transform: translate(-2px, -2px);
 }
 </style>
