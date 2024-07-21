@@ -17,12 +17,12 @@ const navElements = [
     path: "/resume/history",
     icon: "line-md:backup-restore",
   },
-  {
-    name: "Github",
-    path: "https://github.com/0bCdian/Waypaper-Engine",
-    icon: "line-md:github",
-  },
 ];
+const github = {
+  name: "Github",
+  path: "https://github.com/0bCdian/Waypaper-Engine",
+  icon: "line-md:github",
+};
 
 const isMenuOpen = ref(false);
 
@@ -34,7 +34,7 @@ const toggleMenu = () => {
 <template>
   <header class="bg-white sticky top-0 z-50 w-full">
     <nav class="flex items-center justify-between h-20 px-4">
-      <div>
+      <div class="flex">
         <NuxtLink to="/">
           <button
             class="animate-button rounded-lg font-extrabold text-xl border-black border-4 p-2 bg-[#F2cc60] active:bg-[#fdc900] rounded-xs"
@@ -42,7 +42,29 @@ const toggleMenu = () => {
             CVSPARK.
           </button>
         </NuxtLink>
+        <ul class="ml-16 hidden lg:flex space-x-8 items-center">
+          <li v-for="({ name, path, icon }, index) in navElements" :key="index">
+            <NuxtLink
+              :to="path"
+              norel
+              :target="name === 'Github' ? '_blank' : '_self'"
+              class="flex space-x-1 justify-between items-center text-xl"
+            >
+              <Icon :name="icon" size="24" color="black" />
+              <span class="font-bold">{{ name }}</span>
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
+      <NuxtLink
+        :to="github.path"
+        norel
+        target="_blank"
+        class="hidden lg:flex space-x-1 justify-between items-center text-xl"
+      >
+        <Icon :name="github.icon" size="24" color="black" />
+        <span class="font-bold">{{ github.name }}</span>
+      </NuxtLink>
 
       <!-- Hamburger menu for mobile -->
       <div class="lg:hidden">
@@ -52,23 +74,6 @@ const toggleMenu = () => {
       </div>
 
       <!-- Desktop menu -->
-      <ul class="hidden lg:flex space-x-8">
-        <li
-          v-for="({ name, path, icon }, index) in navElements"
-          :key="index"
-          class="rounded-lg transition-all duration-250 border-black border-2 p-2 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] rounded-xs"
-        >
-          <NuxtLink
-            :to="path"
-            norel
-            :target="name === 'Github' ? '_blank' : '_self'"
-            class="flex space-x-1 justify-between items-center text-xl"
-          >
-            <Icon :name="icon" size="24" color="black" />
-            <span class="font-bold">{{ name }}</span>
-          </NuxtLink>
-        </li>
-      </ul>
     </nav>
 
     <!-- Mobile dropdown menu -->
@@ -91,6 +96,18 @@ const toggleMenu = () => {
           >
             <Icon :name="icon" size="1em" color="black" />
             <span class="font-bold">{{ name }}</span>
+          </NuxtLink>
+        </li>
+        <li class="border-b border-gray-200">
+          <NuxtLink
+            :to="github.path"
+            norel
+            target="_blank"
+            class="flex justify-center items-center space-x-2 p-4 text-2xl"
+            @click="isMenuOpen = false"
+          >
+            <Icon :name="github.icon" size="1em" color="black" />
+            <span class="font-bold">{{ github.name }}</span>
           </NuxtLink>
         </li>
       </ul>
