@@ -37,7 +37,7 @@ const toggleMenu = () => {
       <div class="flex">
         <NuxtLink to="/">
           <button
-            class="animate-button rounded-lg font-extrabold text-xl border-black border-4 p-2 bg-[#F2cc60] active:bg-[#fdc900] rounded-xs"
+            class="animate-button rounded-lg font-extrabold text-xl p-2 bg-[#F2cc60] active:bg-[#fdc900] rounded-xs"
           >
             CVSPARK.
           </button>
@@ -123,13 +123,14 @@ const toggleMenu = () => {
 
 .animate-button {
   box-shadow: 3px 3px 0 0 black;
+  border: 2px solid black;
   transition:
-    box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
-    transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .animate-button:hover {
-  box-shadow: 6px 6px 0 0 black;
-  transform: translate(-2px, -2px);
+  box-shadow: 0px 0px 0 0 black;
+  transform: translate(2px, 2px);
 }
 </style>

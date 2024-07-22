@@ -28,52 +28,58 @@
         </div>
         <div class="hidden lg:flex lg:justify-center">
           <img
-            src="~/assets/img/hero.png"
+            src="@/assets/img/hero.png"
             alt="Hero Image"
             className="rounded-xl"
           />
         </div>
       </div>
     </section>
-    <section class="bg-muted py-16 px-6 md:px-12">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12">
+    <section
+      class="inset-0 w-full bg-secondary bg-[linear-gradient(to_right,#00000033_1px,transparent_1px),linear-gradient(to_bottom,#00000033_1px,transparent_1px)] bg-[size:70px_70px] px-5 py-16 flex items-center"
+    >
+      <div class="w-full mx-auto flex items-center flex-col">
+        <h2
+          class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-16"
+        >
           Explore Our Key Features
         </h2>
         <div
-          class="flex flex-wrap md:justify-between md:gap-x-32 gap-y-14 justify-center items-center flex-col md:flex-row"
+          class="lg:grid flex flex-col items-center lg:grid-cols-2 xl:grid-cols-3 gap-10"
         >
-          <Card img-src="hh" text-header="Multi-Format Export">
+          <Card text-header="Multi-Format Export">
             Download your polished resume in PDF, LaTeX, or JSON formats, ready
             for any application process.</Card
           >
-          <Card img-src="hh" text-header="AI-Powered Analysis"
+          <Card text-header="AI-Powered Analysis"
             >Our smart checker spots etiquette faux pas and grammar slips,
             ensuring your resume is flawless.</Card
           >
-          <Card
-            img-src="hh"
-            text-header="No Login, Zero Data Stored In The Cloud"
+          <Card text-header="No Login, Zero Data Stored In The Cloud"
             >Your information stays with you. All history securely saved in
             IndexDB, never in the cloud.</Card
           >
-          <Card img-src="hh" text-header="Template Variety"
+          <Card text-header="Template Variety"
             >Choose from 7 sleek templates to make your resume visually striking
             and professionally tailored following Havard's Guidelines.</Card
           >
-          <Card img-src="hh" text-header="Auto Cover Letters"
+          <Card text-header="Auto Cover Letters"
             >Craft compelling cover letters in seconds with our AI assistant.
             Personalized and powerful.</Card
           >
-          <Card
-            img-src="hh"
-            text-header="Paste The LinkedIn Job Link, Fill Your Info And We'll Do The Rest"
-            >Just upload your current resume or fill the info necessary, paste
-            the job posting link or paste it in, and let the AI do it's
+          <Card text-header="Paste in the job link and we'll do the rest"
+            >Upload your current resume or fill the necessary info, paste the
+            job posting link or it's contents and let the AI do it's
             magic.</Card
           >
         </div>
       </div>
+    </section>
+    <section class="">
+      <h1>FAQ</h1>
+    </section>
+    <section class="">
+      <h1>Footer</h1>
     </section>
   </main>
 </template>

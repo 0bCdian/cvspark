@@ -25,12 +25,16 @@ defineProps<{
   font-size: 1.5rem;
   text-decoration: none;
   transition:
-    box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
-    transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .primary-button:hover {
   box-shadow: 6px 6px 0 0 black;
   transform: translate(-2px, -2px);
+}
+.primary-button:active {
+  box-shadow: 3px 3px 0 0 black;
+  transform: translate(2px, 2px);
 }
 </style>
