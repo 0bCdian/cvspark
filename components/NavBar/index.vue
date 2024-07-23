@@ -32,7 +32,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="bg-white sticky top-0 z-50 w-full">
+  <header class="bg-white sticky top-0 z-50 w-full header-border">
     <nav class="flex items-center justify-between h-20 px-4">
       <div class="flex">
         <NuxtLink to="/">
@@ -116,6 +116,10 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
+.header-border {
+  border-bottom: 4px solid black;
+}
+
 .animate-h[data-show="true"] {
   height: auto;
   height: calc-size(auto);
