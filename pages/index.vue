@@ -1,8 +1,6 @@
-<script setup lang="ts"></script>
-
 <template>
   <main>
-    <section class="py-24 px-12 bg-[#FAE585]">
+    <section class="py-24 px-12 bg-[#FAE585] [border-bottom:4px_solid_black]">
       <div
         class="mx-auto container flex flex-col lg:grid lg:grid-cols-2 items-center justify-between"
       >
@@ -10,11 +8,11 @@
           <h1
             class="md:text-6xl sm:text-5xl text-4xl lg:text-7xl xxl:text-8xl font-extrabold text-primary-foreground mb-6"
           >
-            <span class="">Spark</span> Your Career With
+            <em>Spark</em> Your Career With
             <span class="text-[#6D6BFF] underline-offset-8 underline">AI</span>
             Powered Resumes
           </h1>
-          <p class="lg:text-2xl md:text-xl text-primary-foreground/80 mb-8">
+          <p class="lg:text-3xl md:text-xl mb-8">
             Transform your job search in seconds. csvSpark uses cutting-edge AI
             to craft standout resumes tailored to your unique skills. Your next
             big opportunity is just a click away!
@@ -28,7 +26,7 @@
         </div>
         <div class="hidden lg:flex lg:justify-center">
           <img
-            src="@/assets/img/hero.png"
+            src="@/assets/img/hero.webp"
             alt="Hero Image"
             className="rounded-xl"
           />
@@ -36,11 +34,11 @@
       </div>
     </section>
     <section
-      class="inset-0 w-full bg-secondary bg-[linear-gradient(to_right,#00000033_1px,transparent_1px),linear-gradient(to_bottom,#00000033_1px,transparent_1px)] bg-[size:70px_70px] px-5 py-16 flex items-center"
+      class="[border-bottom:4px_solid_black] inset-0 w-full bg-secondary bg-[linear-gradient(to_right,#00000033_1px,transparent_1px),linear-gradient(to_bottom,#00000033_1px,transparent_1px)] bg-[size:70px_70px] px-5 py-16 flex items-center"
     >
       <div class="w-full mx-auto flex items-center flex-col">
         <h2
-          class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-16"
+          class="text-3xl lg:text-4xl xl:text-6xl font-bold text-center mb-16"
         >
           Explore Our Key Features
         </h2>
@@ -75,8 +73,31 @@
         </div>
       </div>
     </section>
-    <section class="">
-      <h1>FAQ</h1>
+    <section
+      class="[border-bottom:4px_solid_black] inset-0 bg-[#7de2cd] w-full px-5 py-16 flex items-center"
+    >
+      <div class="w-full mx-auto flex items-center flex-col">
+        <h1 class="text-5xl mb-12 font-bold">FAQ</h1>
+        <div class="flex flex-col gap-y-5">
+          <Accordion title="Are resumes generated with this foolproof?"
+            >Of course not! Like with everything made with AI
+            <em><strong>you should 100% proofread it first </strong></em>before
+            using it.</Accordion
+          >
+          <Accordion title="Will this be free forever?"
+            >This is just a demo, as long as there are openAI credits left in my
+            account it will.</Accordion
+          >
+          <Accordion title="Can I use this locally?"
+            >Yes, in the github repository there are instructions on how to do
+            this.</Accordion
+          >
+          <Accordion title="Is this open source?"
+            >Yes, you're free to do whatever with the code, just read the
+            license first :)</Accordion
+          >
+        </div>
+      </div>
     </section>
     <section class="">
       <h1>Footer</h1>

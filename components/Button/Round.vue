@@ -13,7 +13,7 @@ defineProps<{
 .primary-button {
   border: 2px solid black;
   box-shadow: 3px 3px 0 0 black;
-  background-color: #f7cb45;
+  background-color: #69d3e8;
   border-radius: 12px;
   align-content: center;
   justify-content: center;
