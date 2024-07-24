@@ -4,7 +4,9 @@ defineProps<{
 }>();
 </script>
 <template>
-  <button class="primary-button">
+  <button
+    class="primary-button font-black h-12 px-8 lg:px-5 lg:text-2xl lg:h-16"
+  >
     {{ text }}
   </button>
 </template>
@@ -18,11 +20,7 @@ defineProps<{
   align-content: center;
   justify-content: center;
   align-items: center;
-  height: 64px;
   color: black;
-  padding: 0 32px;
-  font-weight: 700;
-  font-size: 1.5rem;
   text-decoration: none;
   transition:
     box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),

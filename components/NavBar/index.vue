@@ -48,10 +48,13 @@ const toggleMenu = () => {
               :to="path"
               norel
               :target="name === 'Github' ? '_blank' : '_self'"
-              class="flex space-x-1 justify-between items-center text-xl"
+              class="flex space-x-1 justify-between items-center text-xl group"
             >
               <Icon :name="icon" size="24" color="black" />
-              <span class="font-bold">{{ name }}</span>
+              <span
+                class="font-bold link-underline link-underline-black group-hover:[]"
+                >{{ name }}</span
+              >
             </NuxtLink>
           </li>
         </ul>
@@ -60,10 +63,12 @@ const toggleMenu = () => {
         :to="github.path"
         norel
         target="_blank"
-        class="hidden lg:flex space-x-1 justify-between items-center text-xl"
+        class="hidden lg:flex space-x-1 justify-between items-center text-xl group"
       >
         <Icon :name="github.icon" size="24" color="black" />
-        <span class="font-bold">{{ github.name }}</span>
+        <span class="font-bold link-underline link-underline-black">{{
+          github.name
+        }}</span>
       </NuxtLink>
 
       <!-- Hamburger menu for mobile -->
@@ -136,5 +141,25 @@ const toggleMenu = () => {
 .animate-button:hover {
   box-shadow: 0px 0px 0 0 black;
   transform: translate(2px, 2px);
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#000, #000);
+}
+
+.group:hover .link-underline {
+  background-size: 100% 3px;
+  background-position: 0 100%;
 }
 </style>

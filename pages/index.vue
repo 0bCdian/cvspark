@@ -1,3 +1,15 @@
+<script setup lang="ts">
+useHead({
+  link: [
+    { rel: "preload", as: "image", href: "/assets/img/hero.webp" },
+    {
+      rel: "preload",
+      as: "font",
+      href: "/public/fonts/Roboto-regular/Roboto-regular.woff2",
+    },
+  ],
+});
+</script>
 <template>
   <main>
     <section class="py-24 px-12 bg-[#FAE585] [border-bottom:4px_solid_black]">
@@ -9,10 +21,10 @@
             class="md:text-6xl sm:text-5xl text-4xl lg:text-7xl xxl:text-8xl font-extrabold text-primary-foreground mb-6"
           >
             <em>Spark</em> Your Career With
-            <span class="text-[#6D6BFF] underline-offset-8 underline">AI</span>
+            <span class="text-[#6D4BFF] underline-offset-8 underline">AI</span>
             Powered Resumes
           </h1>
-          <p class="lg:text-3xl md:text-xl mb-8">
+          <p class="md:text-md lg:text-xl xl:text-2xl text-balance my-12">
             Transform your job search in seconds. csvSpark uses cutting-edge AI
             to craft standout resumes tailored to your unique skills. Your next
             big opportunity is just a click away!
@@ -27,8 +39,10 @@
         <div class="hidden lg:flex lg:justify-center">
           <img
             src="@/assets/img/hero.webp"
+            width="368"
+            height="716"
             alt="Hero Image"
-            className="rounded-xl"
+            className="rounded-xl max-w-full h-auto"
           />
         </div>
       </div>
