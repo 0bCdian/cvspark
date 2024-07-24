@@ -30,7 +30,7 @@ useHead({
             big opportunity is just a click away!
           </p>
           <NuxtLink
-            href="#"
+            to="/resume/build"
             class="inline-flex w-full justify-center lg:justify-start bg-secondary text-secondary-foreground font-medium py-3 rounded-full hover:bg-secondary/80 transition-colors"
           >
             <ButtonRound text="Get Started" />
@@ -113,8 +113,8 @@ useHead({
         </div>
       </div>
     </section>
-    <section class="">
-      <h1>Footer</h1>
+    <section>
+      <Footer />
     </section>
   </main>
 </template>
