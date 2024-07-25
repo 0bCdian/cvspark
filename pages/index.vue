@@ -33,7 +33,7 @@ useHead({
             to="/resume/build"
             class="inline-flex w-full justify-center lg:justify-start bg-secondary text-secondary-foreground font-medium py-3 rounded-full hover:bg-secondary/80 transition-colors"
           >
-            <ButtonRound text="Get Started" />
+            <ButtonRound text="Get Started" size="lg" />
           </NuxtLink>
         </div>
         <div class="hidden lg:flex lg:justify-center">

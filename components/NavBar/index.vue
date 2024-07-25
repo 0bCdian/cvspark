@@ -20,7 +20,7 @@ const navElements = [
 ];
 const github = {
   name: "Github",
-  path: "https://github.com/0bCdian/Waypaper-Engine",
+  path: "https://github.com/0bCdian/cvspark",
   icon: "line-md:github",
 };
 

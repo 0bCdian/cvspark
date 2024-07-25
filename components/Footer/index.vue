@@ -23,7 +23,7 @@
             >About</NuxtLink
           >
           <NuxtLink
-            to="https://github.com/0bCdian/Waypaper-Engine"
+            to="https://github.com/0bCdian/cvspark"
             target="_blank"
             class="hover:text-gray-300 mx-3 my-2"
             >Github</NuxtLink
